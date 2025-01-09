@@ -141,7 +141,8 @@ export default function OrderPlugin(instance) {
         item.order = index
         let boundary = getBoundary(item.pointArr)
         let center = getBoundaryCenter(boundary)
-        createEle(index + 1, center.x, center.y)
+        console.log(item)
+        createEle(item.name || index, center.x, center.y)
     }
 
     /**

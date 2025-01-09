@@ -1,6 +1,8 @@
 import Markjs from './src/index.js'
 import mousePlugin from './src/plugins/mouse.js'
+import orderPlugin from './src/plugins/order.js'
 Markjs.use(mousePlugin)
+Markjs.use(orderPlugin)
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -48,6 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
     dbClickRemovePoint: true
   })
   markjs.on('CURRENT-MARK-ITEM-CHANGE', (item) => {
+  })
+  markjs.on('COMPLETE-CREATE-ITEM', (item) => {
+    console.log("🚀 ~ markjs.on ~ item:", item)
+    item.name = 'markjs'
   })
   markjs.on('IS-CREATE-MARKING-CHANGE', (state) =>{
   })
