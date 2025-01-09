@@ -1,13 +1,30 @@
 {
-  "name": "@wanglin1994/markjs",
-  "version": "1.0.23",
+  "name": "@js/markjs",
+  "version": "1.0.24",
   "description": "一个插件化的多边形标注库",
-  "main": "index.js",
+  "module": "index.js",
+  "type": "module",
+  "files": ["/markjs/dist/*"],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "author": "wanglin25",
+  "author": "js",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rwerplus/markjs"
+  },
+  "keywords": [
+    "markjs",
+    "polygon",
+    "annotation"
+  ],
+  "devDependencies": {
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5"
+  },
   "dependencies": {
     "deepmerge": "^4.2.2"
   }
